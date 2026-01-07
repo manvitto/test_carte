@@ -1,10 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Carte Biguglia</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carte 2 — Choix du sentier</title>
+
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#49071A;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#fff;
+    }
+    .container{
+      width:min(900px, 92vw);
+      text-align:center;
+      padding:28px 16px;
+    }
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+    .back{
+      color:#fff;
+      text-decoration:none;
+      border:1px solid #fff;
+      padding:10px 14px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+    h1{
+      margin:0;
+      font-weight:300;
+      letter-spacing:0.5px;
+      flex:1;
+      text-align:center;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    @media (min-width: 720px){
+      .grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    .btn{
+      display:block;
+      text-decoration:none;
+      color:#fff;
+      border:2px solid #fff;
+      padding:14px 12px;
+      border-radius:18px;
+      transition: 0.25s ease;
+      user-select:none;
+    }
+    .btn:hover{
+      background:#fff;
+      color:#49071A;
+    }
+    .hint{
+      opacity:0.85;
+      margin-top:14px;
+      font-size:14px;
+      line-height:1.4;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Carte Biguglia</h1>
+  <div class="container">
+    <div class="top">
+      <a class="back" href="index.html">← Accueil</a>
+      <h1>Carte 2 — Choisis un sentier</h1>
+      <span style="width:92px"></span>
+    </div>
+
+    <div class="grid">
+      <!-- Sentier 1 : ouvre ta carte exportée -->
+      <a class="btn" href="qgis2web_2026_01_07-16_28_16_777431/" target="_blank" rel="noopener">Sentier 1</a>
+
+      <!-- Les autres : placeholders (tu les branches quand tu as les exports) -->
+      <a class="btn" href="#" onclick="alert('Sentier 2 : pas encore connecté'); return false;">Sentier 2</a>
+      <a class="btn" href="#" onclick="alert('Sentier 3 : pas encore connecté'); return false;">Sentier 3</a>
+      <a class="btn" href="#" onclick="alert('Sentier 4 : pas encore connecté'); return false;">Sentier 4</a>
+      <a class="btn" href="#" onclick="alert('Sentier 5 : pas encore connecté'); return false;">Sentier 5</a>
+      <a class="btn" href="#" onclick="alert('Sentier 6 : pas encore connecté'); return false;">Sentier 6</a>
+      <a class="btn" href="#" onclick="alert('Sentier 7 : pas encore connecté'); return false;">Sentier 7</a>
+      <a class="btn" href="#" onclick="alert('Sentier 8 : pas encore connecté'); return false;">Sentier 8</a>
+    </div>
+
+    <div class="hint">
+      Astuce : quand tu auras exporté les autres sentiers, remplace chaque lien par le dossier qgis2web correspondant.
+    </div>
+  </div>
 </body>
 </html>
+
+
