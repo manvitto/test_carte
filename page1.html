@@ -1,54 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Carte PLU et Carte communale</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carte 1</title>
+  <title>Zone 1 – Insertion paysagère</title>
+
   <style>
-    body { margin:0; }
-    .topbar{
-      background:#49071A;
-      color:#fff;
-      padding:12px 16px;
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #49071A;
       font-family: Arial, Helvetica, sans-serif;
-      display:flex;
-      align-items:center;
-      gap:12px;
     }
-    .topbar a{
-      color:#fff;
-      text-decoration:none;
-      border:1px solid #fff;
-      padding:8px 12px;
-      border-radius:20px;
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      text-align: center;
     }
-    iframe{ width:100%; height: calc(100vh - 56px); border:0; display:block; }
+
+    .section h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .iframe-wrapper {
+      width: 70%;
+      margin: 0 auto;
+      aspect-ratio: 1732 / 975;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      background: #000;
+    }
+
+    .iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* 📱 Mobile */
+    @media (max-width: 768px) {
+      .iframe-wrapper {
+        width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="topbar">
-    <a href="./">← Accueil</a>
-    <div>Carte 1</div>
+
+  <div class="section">
+    <h2>Zone 1</h2>
+
+    <div class="iframe-wrapper">
+      <iframe
+        class="juxtapose"
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=031af2b0-0281-11f1-ba1b-0e6f42328d7d"
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
 
-  <iframe
-  src="qgis2web_2026_01_06-16_38_08_843917/"
-  loading="lazy">
-</iframe>
+    <div class="section">
+    <h2>Zone 2</h2>
+
+    <div class="iframe-wrapper">
+      <iframe
+        class="juxtapose"
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1364bb4a-fefa-11f0-ba1b-0e6f42328d7d"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
 
 </body>
 </html>
-
-</body>
-</html>
-
-
 
 
