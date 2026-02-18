@@ -58,17 +58,18 @@
   /* Iframe responsive, même largeur que le container */
 .iframe-wrapper{
     width:100%;
-    max-width:1000px;
-    margin: 0 auto 20px auto;
+    aspect-ratio: 1680 / 990; /* un peu plus haut */
 }
-
-.iframe-wrapper iframe{
+    overflow:hidden;
+    border-radius:12px;
+    margin: 8px 0 0 0;
+  }
+  .iframe-wrapper iframe{
     width:100%;
-    height:600px;   /* hauteur fixe propre */
+    height:100%;
     border:0;
     display:block;
-}
-
+  }
   .intro-box{
     background:#575756;
     padding:20px;
@@ -118,15 +119,6 @@
       <div class="iframe-wrapper">
         <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=a526a9de-0ccf-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
-
-<div class="iframe-wrapper">
-  <iframe 
-    class="juxtapose"
-    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=XXXX">
-  </iframe>
-</div>
-
-      
     </section>
 
     <!-- ZONE SENSIBLE -->
