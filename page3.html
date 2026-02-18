@@ -10,21 +10,17 @@
     margin:0;
     background:#000;
     font-family: Arial, Helvetica, sans-serif;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
     padding:40px 20px;
   }
 
-  /* Conteneur principal */
   .container{
     max-width:1000px;
-    width:100%;
+    margin:0 auto;
   }
 
-  /* Un bloc = une zone (réduit l'espace entre zones) */
+  /* Espacement maîtrisé entre zones (plus “stable”) */
   .zone{
-    margin: 0 0 40px 0;
+    margin:0 0 28px 0;
   }
 
   h2{
@@ -35,19 +31,18 @@
 
   h3{
     color:#fff;
-    margin:16px 0 12px 0; /* moins d’espace */
+    margin:14px 0 10px 0;
   }
 
   .text{
     color:#fff;
     line-height:1.6;
-    margin:0 0 12px 0; /* moins d’espace */
+    margin:0 0 12px 0;
   }
 
-  /* Puces propres et alignées */
   ul.bullets{
     margin:0 0 12px 0;
-    padding-left: 22px;
+    padding-left:22px;
     color:#fff;
     line-height:1.6;
   }
@@ -55,33 +50,43 @@
     margin:0 0 6px 0;
   }
 
-  /* Iframe responsive, même largeur que le container */
-.iframe-wrapper{
+  /* Wrapper Juxtapose : même taille partout, plus de iframes "petites" */
+  .iframe-wrapper{
     width:100%;
-    aspect-ratio: 1680 / 990; /* un peu plus haut */
-}
-    overflow:hidden;
     border-radius:12px;
-    margin: 8px 0 0 0;
+    overflow:hidden;
+    margin-top:8px;
+    background:#000;
   }
+
+  /* Hauteur uniforme (évite les variations et les "tout petits") */
   .iframe-wrapper iframe{
     width:100%;
-    height:100%;
+    height:560px; /* ajuste ici si tu veux plus grand (ex: 620px) */
     border:0;
     display:block;
   }
+
+  /* Mobile */
+  @media (max-width: 720px){
+    .iframe-wrapper iframe{
+      height:420px;
+    }
+  }
+
   .intro-box{
     background:#575756;
     padding:20px;
     border-radius:8px;
-    margin-bottom:24px;
-}
-
-.intro-box p{
-    margin:0;
-    color:#ffffff; /* texte blanc pour lisibilité */
-}
-
+    margin-bottom:22px;
+  }
+  .intro-box p{
+    margin:0 0 12px 0; /* remplace tes <br><br> */
+    color:#fff;
+  }
+  .intro-box p:last-child{
+    margin-bottom:10px;
+  }
 </style>
 </head>
 
@@ -91,10 +96,10 @@
 
     <h2>LOZARI - Aménagement et sécurisation de la RT autour d’un espace résidentiel, touristique et commercial</h2>
 
-  <div class="intro-box">
+    <div class="intro-box">
       <p><b>1. Usages observés</b><br>
       Le secteur concerné accueille une population permanente à laquelle s’ajoute, en période estivale, une population saisonnière importante pouvant dépasser 1 000 personnes. Les usagers y sont très diversifiés, incluant des familles avec enfants, des seniors, des joggeurs… Les déplacements à pied y sont fréquents, notamment pour rejoindre les deux pôles structurants du site que sont le centre commercial et la plage de Lozari.</p>
-<br><br>
+
       <p><b>2. Dysfonctionnements majeurs</b></p>
       <ul class="bullets">
         <li>Absence totale de trottoirs et de zones protégées</li>
@@ -108,14 +113,12 @@
     <!-- ZONE 1 -->
     <section class="zone">
       <h3>ZONE n°1 – Du camping au changement de côté de la voie</h3>
-
       <ul class="bullets">
         <li>Création d’un cheminement côté « Belgodère »</li>
         <li>Barrière bois de sécurisation de la déambulation entre route et chemin</li>
         <li>Gestion des eaux pluviales par caniveau longitudinal</li>
         <li>Éclairage diffus pour marquer le cheminement</li>
       </ul>
-
       <div class="iframe-wrapper">
         <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=a526a9de-0ccf-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
@@ -124,31 +127,27 @@
     <!-- ZONE SENSIBLE -->
     <section class="zone">
       <h3>ZONE SENSIBLE</h3>
-
       <ul class="bullets">
         <li>Changement de côté de la voie via un passage protégé</li>
         <li>Ralentisseurs en amont de la traversée</li>
         <li>STOP sur voies secondaires</li>
         <li>Démaquisage + terrassement</li>
-         <li>Barrière continue de protection</li>
+        <li>Barrière continue de protection</li>
       </ul>
-
       <div class="iframe-wrapper">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="983" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=025982cc-0cba-11f1-ba1b-0e6f42328d7d"></iframe>
+        <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=025982cc-0cba-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
     </section>
 
-       <!-- ZONE 2 -->
+    <!-- ZONE 2 -->
     <section class="zone">
       <h3>ZONE n°2 – Du changement de côté de la voie au Centre Commercial</h3>
-
       <ul class="bullets">
         <li>Création d’un cheminement côté « Palasca »</li>
         <li>Barrière bois de sécurisation de la déambulation entre route et chemin</li>
         <li>Gestion des eaux pluviales par caniveau longitudinal</li>
         <li>Éclairage diffus pour marquer le cheminement</li>
       </ul>
-
       <div class="iframe-wrapper">
         <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5092168a-0cb9-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
@@ -157,47 +156,42 @@
     <!-- ZONE 3 -->
     <section class="zone">
       <h3>ZONE n°3 – Centre Commercial</h3>
-
       <ul class="bullets">
         <li>Matérialisation douce du cheminement</li>
         <li>Continuité piétonne à travers la placette centrale</li>
         <li>Itinéraire périphérique pour PMR et cyclistes</li>
         <li>Éclairage existant conservé</li>
       </ul>
-      
       <div class="iframe-wrapper">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="1150" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=982950d0-0cb9-11f1-ba1b-0e6f42328d7d"></iframe>
+        <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=982950d0-0cb9-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
     </section>
 
     <!-- ZONE 4 -->
     <section class="zone">
       <h3>ZONE n°4 – De la RT vers la plage</h3>
-
       <ul class="bullets">
         <li>Valorisation du cheminement existant en contrebas</li>
         <li>Démaquisage, nettoyage, compactage du sentier sur 2m</li>
         <li>Continuité piétonne et cyclable sécurisée</li>
         <li>Éclairage diffus</li>
       </ul>
-            <div class="iframe-wrapper">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="973" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2f57b30c-0cba-11f1-ba1b-0e6f42328d7d"></iframe>
+      <div class="iframe-wrapper">
+        <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2f57b30c-0cba-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
-    </section>  
+    </section>
 
- <!-- ÉCLAIRAGE & PAYSAGE-->
+    <!-- ÉCLAIRAGE & PAYSAGE -->
     <section class="zone">
       <h3>ÉCLAIRAGE & PAYSAGE</h3>
-
       <ul class="bullets">
         <li>Éclairage diffus, non éblouissant</li>
         <li>Objectif : lisibilité du cheminement, non sur-éclairage</li>
         <li>Zones concernées : 1, 2 et 4</li>
         <li>Appareils discrets intégrés au paysage</li>
       </ul>
-      
       <div class="iframe-wrapper">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="983" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=db3b4efa-0cb9-11f1-ba1b-0e6f42328d7d"></iframe>
+        <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=db3b4efa-0cb9-11f1-ba1b-0e6f42328d7d"></iframe>
       </div>
     </section>
 
@@ -205,19 +199,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
