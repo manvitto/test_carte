@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lozari — Zones</title>
+<title>Lozari — Documents d'Urbanisme</title>
 
 <style>
   body{
@@ -18,104 +18,123 @@
     margin:0 auto;
   }
 
-  /* Espacement maîtrisé entre zones (plus “stable”) */
-  .zone{
-    margin:0 0 28px 0;
-  }
-
   h2{
     color:#fff;
     margin:0 0 18px 0;
     line-height:1.25;
   }
 
-  h3{
-    color:#fff;
-    margin:14px 0 10px 0;
+  .intro-box{
+    background:#575756;
+    padding:20px;
+    border-radius:8px;
+    margin-bottom:28px;
   }
 
-  .text{
-    color:#fff;
-    line-height:1.6;
+  .intro-box p{
     margin:0 0 12px 0;
-  }
-
-  ul.bullets{
-    margin:0 0 12px 0;
-    padding-left:22px;
     color:#fff;
     line-height:1.6;
   }
-  ul.bullets li{
-    margin:0 0 6px 0;
+
+  .legend{
+    margin:20px 0 30px 0;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap:12px;
   }
 
-  /* Wrapper Juxtapose : même taille partout, plus de iframes "petites" */
+  .legend-item{
+    display:flex;
+    align-items:center;
+    color:#fff;
+    font-size:14px;
+  }
+
+  .legend-color{
+    width:18px;
+    height:18px;
+    margin-right:10px;
+    border-radius:3px;
+  }
+
   .iframe-wrapper{
     width:100%;
     border-radius:12px;
     overflow:hidden;
-    margin-top:8px;
     background:#000;
   }
 
-  /* Hauteur uniforme (évite les variations et les "tout petits") */
   .iframe-wrapper iframe{
     width:100%;
-    height:720px; /* ajuste ici si tu veux plus grand (ex: 620px) */
+    height:720px;
     border:0;
     display:block;
   }
 
-  /* Mobile */
   @media (max-width: 720px){
     .iframe-wrapper iframe{
       height:420px;
     }
   }
 
-  .intro-box{
-    background:#575756;
-    padding:20px;
-    border-radius:8px;
-    margin-bottom:22px;
-  }
-  .intro-box p{
-    margin:0 0 12px 0; /* remplace tes <br><br> */
-    color:#fff;
-  }
-  .intro-box p:last-child{
-    margin-bottom:10px;
-  }
 </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <h2>Documents d'Urbanisme</h2>
+<h2>Documents d'Urbanisme</h2>
 
-    <div class="intro-box">
-      <p><b>Etat des documents d'urbanisme en 2025</b><br></p>
+<div class="intro-box">
+  <p><b>État des documents d’urbanisme en 2025</b></p>
+  <p>
+    Cette cartographie présente la situation réglementaire des communes 
+    concernées : PLU approuvés ou en élaboration, cartes communales et 
+    communes soumises au RNU. Elle permet de visualiser le niveau de 
+    planification territoriale à l’échelle intercommunale.
+  </p>
+</div>
 
-    <!-- ZONE 1 -->
-    <section class="zone">
-      </ul>
-      <div class="iframe-wrapper">
-        <iframe class="juxtapose" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=a526a9de-0ccf-11f1-ba1b-0e6f42328d7d"></iframe>
-      </div>
-    </section>
+<!-- LÉGENDE -->
+<div class="legend">
 
-   
-  
-   
-
+  <div class="legend-item">
+    <div class="legend-color" style="background:#2E7D32;"></div>
+    PLU approuvé
   </div>
+
+  <div class="legend-item">
+    <div class="legend-color" style="background:#E67E22;"></div>
+    PLU en élaboration
+  </div>
+
+  <div class="legend-item">
+    <div class="legend-color" style="background:#66A860;"></div>
+    Carte communale approuvée
+  </div>
+
+  <div class="legend-item">
+    <div class="legend-color" style="background:#F4A261;"></div>
+    Carte communale en élaboration
+  </div>
+
+  <div class="legend-item">
+    <div class="legend-color" style="background:#BDBDBD;"></div>
+    Règlement National d’Urbanisme (RNU)
+  </div>
+
+</div>
+
+<!-- CARTE -->
+<div class="iframe-wrapper">
+  <iframe 
+    src="doc_urba/qgis2web_2026_02_25-16_22_09_673345/index.html">
+  </iframe>
+</div>
+
+</div>
 
 </body>
 </html>
-
-
-
-
