@@ -37,32 +37,12 @@
     line-height:1.6;
   }
 
-  .legend{
-    margin:20px 0 30px 0;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap:12px;
-  }
-
-  .legend-item{
-    display:flex;
-    align-items:center;
-    color:#fff;
-    font-size:14px;
-  }
-
-  .legend-color{
-    width:18px;
-    height:18px;
-    margin-right:10px;
-    border-radius:3px;
-  }
-
   .iframe-wrapper{
     width:100%;
     border-radius:12px;
     overflow:hidden;
     background:#000;
+    margin-bottom:40px;
   }
 
   .iframe-wrapper iframe{
@@ -76,6 +56,27 @@
     .iframe-wrapper iframe{
       height:420px;
     }
+  }
+
+  /* Bloc analyse */
+  .analyse-box{
+    background:#ffffff;
+    padding:30px;
+    border-radius:10px;
+    margin-top:20px;
+  }
+
+  .analyse-box img{
+    width:100%;
+    max-width:700px;
+    display:block;
+    margin:0 auto 25px auto;
+  }
+
+  .analyse-box p{
+    color:#000;
+    line-height:1.6;
+    margin-bottom:14px;
   }
 
 </style>
@@ -102,6 +103,31 @@
   <iframe 
     src="doc_urba/qgis2web_2026_02_25-17_18_40_836722/index.html">
   </iframe>
+</div>
+
+<!-- ANALYSE -->
+<div class="analyse-box">
+
+  <img src="test_carte/doc_urba/image/histogramme.png" alt="Histogramme des documents d'urbanisme">
+
+  <p>
+    L’analyse quantitative met en évidence une dynamique forte de planification 
+    territoriale. 78 Plans Locaux d’Urbanisme ont été élaborés, dont 36 actuellement 
+    en révision, tandis que 45 communes sont engagées dans l’élaboration d’un nouveau PLU.
+  </p>
+
+  <p>
+    Les cartes communales demeurent un outil largement mobilisé : 88 ont été 
+    approuvées, dont 19 en révision et 57 en cours de réalisation. Cette situation 
+    traduit une volonté progressive d’encadrement réglementaire du développement local.
+  </p>
+
+  <p>
+    Toutefois, 91 communes restent soumises au Règlement National d’Urbanisme (RNU), 
+    révélant un contraste territorial marqué entre secteurs structurés par des 
+    documents de planification et territoires encore dépourvus d’outil stratégique local.
+  </p>
+
 </div>
 
 </div>
