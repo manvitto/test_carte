@@ -1,114 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Corbara – Insertion paysagère</title>
+<meta charset="UTF-8">
+<title>Corbara – Insertion paysagère</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      background: #49071A;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .section {
-      max-width: 1200px;
-      margin: 0 auto 60px;
-      text-align: left;
-      color: #ffffff;
-    }
-
-    .section h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #ffffff;
-    }
-
-    h3{
-    color:#fff;
-    margin:16px 0 12px 0;
-    text-align:left;
+<style>
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #49071A;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-    .iframe-wrapper {
-      width: 90%;
-      margin: 0 auto;
-      aspect-ratio: 1732 / 975;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      background: #ffffff;
-    }
+/* section */
+.section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  color: #ffffff;
+}
 
-    .iframe-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+/* bloc commun titre + image */
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
 
-    /* 📱 Mobile */
-    @media (max-width: 768px) {
-      .iframe-wrapper {
-        width: 100%;
-      }
-    }
-  </style>
+/* titre */
+.content h2 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* iframe juxtapose */
+.iframe-wrapper {
+  width: 100%;
+  aspect-ratio: 1732 / 975;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  background: #ffffff;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="section">
-    <h3>Zone 1</h3>
-
-    <div class="iframe-wrapper">
-      <iframe
-        class="juxtapose"
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0026618e-1942-11f1-ba1b-0e6f42328d7d"
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
-    
-  <div class="section">  
+<div class="section">
+  <div class="content">
     <h2>Zone 1</h2>
 
     <div class="iframe-wrapper">
-      <iframe
-        class="juxtapose"
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=92f9bc9a-1942-11f1-ba1b-0e6f42328d7d"
-        loading="lazy">
-      </iframe>
+      <iframe class="juxtapose"
+      src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0026618e-1942-11f1-ba1b-0e6f42328d7d"
+      loading="lazy"></iframe>
     </div>
   </div>
+</div>
 
-  <div class="section">  
+<div class="section">
+  <div class="content">
+    <h2>Zone 1</h2>
+
+    <div class="iframe-wrapper">
+      <iframe class="juxtapose"
+      src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=92f9bc9a-1942-11f1-ba1b-0e6f42328d7d"
+      loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="content">
     <h2>Zone 2</h2>
 
     <div class="iframe-wrapper">
-      <iframe
-        class="juxtapose"
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5f010442-1943-11f1-ba1b-0e6f42328d7d"
-        loading="lazy">
-      </iframe>
+      <iframe class="juxtapose"
+      src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=5f010442-1943-11f1-ba1b-0e6f42328d7d"
+      loading="lazy"></iframe>
     </div>
   </div>
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
