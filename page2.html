@@ -115,7 +115,215 @@
 </html>
 
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I Chjassi di Biguglia</title>
 
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      background:#49071A;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#fff;
+    }
+
+    .container{
+      width:min(900px, 92vw);
+      text-align:center;
+      padding:28px 16px;
+    }
+
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+
+    .back{
+      color:#fff;
+      text-decoration:none;
+      border:1px solid #fff;
+      padding:10px 14px;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+
+    h1{
+      margin:0;
+      font-weight:300;
+      letter-spacing:0.5px;
+      flex:1;
+      text-align:center;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    @media (min-width: 720px){
+      .grid{ 
+        grid-template-columns: repeat(4, minmax(0, 1fr)); 
+      }
+    }
+
+    .btn-wrap{
+      position:relative;
+    }
+
+    .btn{
+      display:block;
+      text-decoration:none;
+      color:#fff;
+      border:2px solid #fff;
+      padding:14px 12px;
+      border-radius:18px;
+      transition:0.25s ease;
+      user-select:none;
+      background:transparent;
+      position:relative;
+      z-index:2;
+    }
+
+    .btn:hover{
+      background:#fff;
+      color:#49071A;
+    }
+
+    .team-popup{
+      position:absolute;
+      left:50%;
+      bottom:calc(100% + 10px);
+      transform:translateX(-50%) translateY(8px);
+      width:min(320px, 85vw);
+      background:#ffffff;
+      color:#49071A;
+      border-radius:14px;
+      padding:14px 16px;
+      text-align:left;
+      box-shadow:0 10px 30px rgba(0,0,0,0.28);
+      opacity:0;
+      visibility:hidden;
+      transition:0.25s ease;
+      z-index:10;
+      pointer-events:none;
+      line-height:1.45;
+    }
+
+    .team-popup::after{
+      content:"";
+      position:absolute;
+      top:100%;
+      left:50%;
+      transform:translateX(-50%);
+      border-width:8px;
+      border-style:solid;
+      border-color:#ffffff transparent transparent transparent;
+    }
+
+    .btn-wrap:hover .team-popup{
+      opacity:1;
+      visibility:visible;
+      transform:translateX(-50%) translateY(0);
+    }
+
+    .team-title{
+      font-weight:700;
+      margin-bottom:8px;
+      font-size:15px;
+    }
+
+    .team-line{
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .hint{
+      opacity:0.85;
+      margin-top:14px;
+      font-size:14px;
+      line-height:1.4;
+    }
+
+    .btn.disabled{
+      background:#777;
+      border:2px solid #777;
+      color:#ccc;
+      cursor:not-allowed;
+      pointer-events:none;
+      opacity:0.6;
+    }
+
+    @media (max-width: 719px){
+      .team-popup{
+        left:0;
+        right:0;
+        margin:auto;
+        transform:translateY(8px);
+      }
+
+      .btn-wrap:hover .team-popup{
+        transform:translateY(0);
+      }
+
+      .team-popup::after{
+        left:50%;
+        transform:translateX(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <a class="back" href="index.html">← Accueil</a>
+      <h1>I Chjassi di Biguglia</h1>
+      <span style="width:92px"></span>
+    </div>
+
+    <div class="grid">
+      <a class="btn" href="sentierbiguglia/qgis2web_2026_01_21-16_17_46_438992/" target="_blank" rel="noopener">4-1 <b>Mairie - Biguglia Village</b></a>
+
+      <!-- Bouton avec équipe au survol -->
+      <div class="btn-wrap">
+        <a class="btn" href="sentierbiguglia/qgis2web_2026_01_21-16_20_58_599632/" target="_blank" rel="noopener">
+          4-2 <b>Biguglia Village - Bocca di Santa Lucia</b>
+        </a>
+        <div class="team-popup">
+          <div class="team-title">Biguglia village / Bocca di Santa Lucia</div>
+          <div class="team-line"><b>Équipe 1 / chef :</b> Poli Paul / Beltran Lionel</div>
+          <div class="team-line"><b>Équipe 2 / agent :</b> Acquatella Paul / Perard Aurélien</div>
+          <div class="team-line"><b>Équipe 3 / chef :</b> Giovannetti Stéphane / Mailhon Pascal / Giudicelli Patrick</div>
+        </div>
+      </div>
+
+      <a class="btn" href="sentierbiguglia/qgis2web_2026_03_19-10_40_06_914861/" target="_blank" rel="noopener">4-3 <b>Biguglia Village - Capella Sant'Andrea</b></a>
+
+      <a class="btn disabled">3_1 <b>La voie douce</b></a>
+      <a class="btn" href="sentierbiguglia/qgis2web_2026_01_21-15_56_56_434426/" target="_blank" rel="noopener">3_2 <b>Lot. U Lancone - Monte Grossu</b></a>
+      <a class="btn disabled">3_3 <b>Lot. U Bevincu - Monte Grossu</b></a>
+      <a class="btn" href="sentierbiguglia/qgis2web_2026_03_24-14_25_14_340129/" target="_blank" rel="noopener">3_4 <b>Lot. Saint François - Ortale</b></a>
+      <a class="btn" href="sentierbiguglia/qgis2web_2026_03_24-14_36_30_248874/" target="_blank" rel="noopener">3_5 <b>Ortale - Monte Grossu</b></a>
+      <a class="btn" href="sentierbiguglia/qgis2web_2026_03_24-15_08_06_146622/" target="_blank" rel="noopener">3_6 <b>Ortale - Rutali</b></a>
+    </div>
+
+    <div class="hint"></div>
+  </div>
+</body>
+</html>
 
 
 
