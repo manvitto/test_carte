@@ -1,85 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comparateur avant / après</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juxtapose</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .juxtapose-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background: #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    }
-
-    .juxtapose-wrapper iframe {
-      width: 100%;
       height: 100%;
-      border: none;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: 0;
       display: block;
-    }
-
-    .source {
-      margin-top: 15px;
-      text-align: center;
-      font-size: 0.95rem;
-    }
-
-    .source a {
-      color: #0a58ca;
-      text-decoration: none;
-    }
-
-    .source a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Borgo avant / après</h1>
-    <p>Faites glisser le curseur pour comparer les deux images.</p>
-
-    <div class="juxtapose-wrapper">
-      <iframe
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=321fe590-4b2c-11f1-ba1b-0e6f42328d7d"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <div class="source">
-      <a href="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=321fe590-4b2c-11f1-ba1b-0e6f42328d7d" target="_blank" rel="noopener noreferrer">
-        Ouvrir le comparateur dans un nouvel onglet
-      </a>
-    </div>
-  </div>
+  <iframe src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=321fe590-4b2c-11f1-ba1b-0e6f42328d7d"></iframe>
 </body>
 </html>
