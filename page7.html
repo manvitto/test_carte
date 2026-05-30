@@ -14,62 +14,83 @@ body {
 }
 
 /* container */
-.container{
-  width:min(900px, 92vw);
-  text-align:center;
-  padding:28px 16px;
+.container {
+  width: 90vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 28px 16px;
 }
 
-  
 /* titre principal */
-.main-title{
-  max-width:1200px;
-  margin:0 auto 60px;
-  text-align:center;
-  font-size:32px;
-  font-weight:bold;
+.main-title {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 /* section */
 .section {
-  max-width:1200px;
-  margin:0 auto 60px;
+  width: 100%;
+  margin: 0 auto 60px;
 }
 
 /* bloc commun titre + image */
 .content {
-  width:90%;
-  margin:0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* titre des zones */
-.content h2{
-  margin:0 0 20px 0;
-  font-size:16px;
+.content h2 {
+  margin: 0 0 20px 0;
+  font-size: 16px;
 }
 
 /* bloc juxtapose */
-.iframe-wrapper{
-  width:100%;
-  aspect-ratio:1732 / 975;
-  background:#ffffff;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+.iframe-wrapper {
+  width: 100%;
+  aspect-ratio: 1732 / 975;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.iframe-wrapper iframe{
-  width:100%;
-  height:100%;
-  border:none;
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* lien retour éventuel */
+.back {
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.back:hover {
+  background: #ffffff;
+  color: #49071A;
 }
 
 /* mobile */
-@media (max-width:768px){
-  .content{
-    width:100%;
+@media (max-width: 768px) {
+  .container {
+    width: 95vw;
+    padding: 20px 10px;
   }
 
-  .main-title{
-    font-size:26px;
+  .content {
+    width: 100%;
+  }
+
+  .main-title {
+    font-size: 26px;
   }
 }
 </style>
@@ -78,28 +99,27 @@ body {
 <body>
 
 <div class="main-title">
-Insertions paysagères – Commune de Campile
+  Insertions paysagères – Commune de Campile
 </div>
 
-  <div class="container">
-    <div class="top">
-      <a class="back" href="index.html">← Accueil</a>
-      <h1>Insertions paysagères – Commune de Campile</h1>
-      <span style="width:92px"></span>
-    </div>
-  
-<div class="section">
-  <div class="content">
-    <h2>Zone 1 : Vue coupe</h2>
+<div class="container">
+  <div class="top">
+    <a class="back" href="index.html">← Accueil</a>
+    <h1>Insertions paysagères – Commune de Campile</h1>
+    <span style="width:92px"></span>
+  </div>
 
-    <div class="iframe-wrapper">
-      <iframe class="juxtapose"
-      src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=438b0c84-5bf2-11f1-ba1b-0e6f42328d7d"
-      loading="lazy"></iframe>
+  <div class="section">
+    <div class="content">
+      <h2>Zone 1 : Vue coupe</h2>
+
+      <div class="iframe-wrapper">
+        <iframe class="juxtapose"
+          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=438b0c84-5bf2-11f1-ba1b-0e6f42328d7d"
+          loading="lazy"></iframe>
+      </div>
     </div>
   </div>
-</div>
-
 </div>
 
 </body>
