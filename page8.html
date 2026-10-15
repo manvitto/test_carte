@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campile – Archives photographiques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f5f0;
+      margin: 0;
+      padding: 30px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #666;
+    }
+    .galerie {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    figure {
+      margin: 0;
+      padding: 12px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px #00000012;
+    }
+    figure img {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      display: block;
+    }
+    figcaption {
+      padding: 14px 4px 6px;
+      font-size: 16px;
+      text-align: center;
+      font-weight: bold;
+    }
+    @media (max-width: 650px) {
+      .galerie {
+        grid-template-columns: 1fr;
+      }
+      figure img {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Campile – Mémoire photographique</h1>
+<p class="intro">Patrimoine architectural et historique</p>
+
+<main class="galerie">
+
+  <figure>
+    <a href="images/clocher-campile-1915.jpg" target="_blank">
+      <img src="images/clocher-campile-1915.jpg"
+           alt="Ancien clocher de Campile en 1915">
+    </a>
+    <figcaption>Le clocher de Campile – 1915</figcaption>
+  </figure>
+
+  <figure>
+    <a href="images/maison-antoniotti-1989.jpg" target="_blank">
+      <img src="images/maison-antoniotti-1989.jpg"
+           alt="Maison Antoniotti en 1989">
+    </a>
+    <figcaption>Maison Antoniotti – 1989</figcaption>
+  </figure>
+
+  <figure>
+    <a href="images/hotel-bellevue.jpg" target="_blank">
+      <img src="images/hotel-bellevue.jpg"
+           alt="Photographie ancienne de l'hôtel Bellevue">
+    </a>
+    <figcaption>Hôtel Bellevue</figcaption>
+  </figure>
+
+  <figure>
+    <a href="images/blason-gavini.jpg" target="_blank">
+      <img src="images/blason-gavini.jpg"
+           alt="Armoiries de la famille Gavini">
+    </a>
+    <figcaption>Blason de la famille Gavini</figcaption>
+  </figure>
+
+</main>
+</body>
+</html>
